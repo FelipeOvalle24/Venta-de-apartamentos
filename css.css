@@ -1,0 +1,345 @@
+body{
+    background: orange;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #F4F2DE;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 130%;
+    z-index: 800;
+    background: orange;
+}
+
+#titulo{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#reset{
+    width: 10%;
+}
+
+#reset button{
+    width: 100%;
+    height: 40px;
+    color: #F4F2DE;
+    font-family: 'Fjalla One', sans-serif;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+    background: transparent;
+}
+
+#reset button:hover{
+    cursor: pointer;
+    background: rgb(175, 124, 28);
+}
+
+/*ACA COMIENZA EL CODIGO DEL MAIN*/
+#container-principal{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 85%;
+}
+
+#container-principal div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-info{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+#container-img{
+    width: 70%;
+    z-index: 1;
+}
+
+#container-img img:hover{
+    cursor: pointer;
+}
+
+#container-info h3, h2, button{
+    width: 65%;
+    color: #F4F2DE;
+}
+
+#container-principal div img{
+    height: 100%;
+}
+
+#container-info {
+    opacity: 0;
+    display: none;
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1.5s;
+}
+
+#container-info.visible {
+    opacity: 1;
+    transform: translateX(90%);
+}
+
+#container-img{
+    transform: translateX(-20%);
+    transition: transform 1s;
+}
+
+#container-img.visible {
+    transform: translateX(-5%);
+}
+
+#boton-continuar{
+    width: 65%;
+    height: 6%;
+    color: #F4F2DE;
+    font-family: 'Fjalla One', sans-serif;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+    background: transparent;
+}
+
+#boton-continuar:hover, .boton-apartamentos:hover{
+    cursor: pointer;
+    background: rgb(175, 124, 28);
+}
+
+#container-img.invisible{
+    transform: translateX(100%);
+    transition: opacity 1s, transform 1s;
+}
+
+#container-info.invisible{
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1s;
+}
+
+#container-apartamentos{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    transform: translateY(150%);
+    opacity: 0;
+}
+
+#container-apartamentos div{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.boton-apartamentos{
+    width: 40%;
+    height: 40px;
+    font-family: 'Fjalla One', sans-serif;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+    background: transparent;
+}
+
+#container-apartamentos.visible{
+    transform: translateY(0%);
+    transition: opacity 1s, transform 1.5s;
+    opacity: 1;
+}
+
+#container-apartamentos.invisible{
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1s;
+}
+
+#apartamento-uno, #apartamento-dos{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: auto;
+    background:rgb(255, 181, 44);
+    padding-top: 2%;
+    transform: translateX(150%);
+    opacity: 0;
+}
+
+#apartamento-uno.visible{
+    transform: translateY(-57%);
+    transition: opacity 1s, transform 1.5s;
+    opacity: 1;
+}
+
+#apartamento-dos.visible{
+    transform: translateY(-57%);
+    transition: opacity 1s, transform 1.5s;
+    opacity: 1;
+}
+
+#container-img-apartamento-uno, #container-img-apartamento-dos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+#container-img-apartamento-uno img, #container-img-apartamento-dos img{
+    width: 45%;
+    height: 260px;
+    margin-bottom: 1%;
+    background: rgb(175, 124, 28);
+    border-radius: 10px;
+}
+
+#container-img-apartamento-uno img:hover, #container-img-apartamento-dos img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 1s;
+    border: solid 1px black;
+}
+
+#container-texto-apartamento-uno, #container-texto-apartamento-dos{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    color: #F4F2DE;
+    background: rgb(175, 124, 28);
+    border-radius: 10px;
+    padding: 1%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 80%;
+}
+
+.boton-contacto{
+    width: 100%;
+    height: 100%;
+    color: #F4F2DE;
+    font-family: 'Fjalla One', sans-serif;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+    background: transparent;
+    margin-bottom: 3%;
+}
+
+a{
+    margin-bottom: 3%;
+}
+
+.boton-contacto:hover{
+    cursor: pointer;
+    background: rgb(143, 103, 28);
+}
+
+#container-presentacion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #F4F2DE;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 200%;
+    text-align: center;
+    position: absolute;
+    z-index: 5000;
+    background: rgb(247, 177, 46);
+}
+
+#container-presentacion button{
+    width: 15%;
+    height: 40px;
+    color: #F4F2DE;
+    font-family: 'Fjalla One', sans-serif;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 10px;
+    background: transparent;
+}
+
+#container-presentacion button:hover{
+    cursor: pointer;
+    background: rgb(175, 124, 28);
+}
+
+#container-presentacion.mover{
+    transform: translateY(100%);
+    transition: opacity 1s, transform 1.5s;
+    z-index: 5000;
+}
+
+#error{
+    display: none;
+}
+/*ACA TERMINA EL CODIGO DEL MAIN*/
+
+@media screen and (max-width: 768px) {
+    body{
+        background: orange;
+        width: 100%;
+    }
+
+    header{
+        display: none;
+    }
+
+    #container-presentacion{
+        display: none;
+    }
+
+    #container-principal{
+        display: none;
+    }
+
+    #container-apartamentos{
+        display: none;
+    }
+
+    #apartamento-uno{
+        display: none;
+    }
+
+    #apartamento-dos{
+        display: none;
+    }
+
+    #error{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #error div{
+        width: 95%;
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 75%;
+    }
+
+    #error div img{
+        height: 200px;
+    }
+
+    #error div h2 {
+        width: 95%;
+        font-family: 'Roboto Mono', monospace;
+    }
+}
